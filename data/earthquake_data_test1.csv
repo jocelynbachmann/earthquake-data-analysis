@@ -1,0 +1,7 @@
+Search Parameters,Year,Month,Day,Hour,Minute,Second,Tsunami,Volcano,Location Name,Latitude,Longitude,Focal Depth (km),Magnitude,MMI Intensity,Deaths,Death Description,Missing,Missing Description,Injuries,Injuries Description,Damage ($Mil),Damage Description,Houses Destroyed,Houses Destroyed Description,Houses Damaged,Houses Damaged Description,Total Deaths,Total Death Description,Total Missing,Total Missing Description,Total Injuries,Total Injuries Description,Total Damage ($Mil),Total Damage Description,Total Houses Destroyed,Total Houses Destroyed Description,Total Houses Damaged,Total Houses Damaged Description
+"[""1960 <= Year >= 2021"",""Earthquake Magnitude >= 2.5""]",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1960,1,13,15,40,34,1896,,"PERU:  AREQUIPA,CHUQUIBAMBA,CARAVELI,COTAHUASI",-15.75,-72.75,160,7.8,10,63,2,,,200,3,,3,,3,,,63,2,,,200,3,,3,,3,,
+,1987,9,22,13,43,37.6,,,"ECUADOR:  AMBATO, LATACUNGA, RIOBAMBA",-0.978,-78.05,10,6.2,,2,1,,,12,1,,2,,3,,,2,1,,,12,1,,2,,3,,
+,2010,1,12,21,53,10,4622,,HAITI:  PORT-AU-PRINCE,18.457,-72.533,13,7,,316000,4,,,30000,4,8000,4,97294,4,188383,4,316000,4,,,300000,4,8000,4,97294,4,188383,4
+,2016,7,31,9,18,17,,,CHINA:  GUANGXI PROVINCE,24.134,111.478,25,4.9,,,,,,,,,2,,,200,3,,,,,,,,2,,,200,3
+,2017,9,8,4,49,2,5658,,"MEXICO: OAXACA, CHIAPAS, TABASCO; GUATEMALA",14.761,-94.103,46,8.2,9,98,2,,,251,3,4000,4,47468,4,94027,4,98,2,,,251,3,4000,4,47468,4,94027,4

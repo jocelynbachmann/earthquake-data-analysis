@@ -1,0 +1,8 @@
+Search Parameters,Year,Month,Day,Hour,Minute,Second,Tsunami,Volcano,Location Name,Latitude,Longitude,Focal Depth (km),Magnitude,MMI Intensity,Deaths,Death Description,Missing,Missing Description,Injuries,Injuries Description,Damage ($Mil),Damage Description,Houses Destroyed,Houses Destroyed Description,Houses Damaged,Houses Damaged Description,Total Deaths,Total Death Description,Total Missing,Total Missing Description,Total Injuries,Total Injuries Description,Total Damage ($Mil),Total Damage Description,Total Houses Destroyed,Total Houses Destroyed Description,Total Houses Damaged,Total Houses Damaged Description
+"[""1960 <= Year >= 2021"",""Earthquake Magnitude >= 2.5""]",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,1960,1,13,15,40,34,1896,,"PERU:  AREQUIPA,CHUQUIBAMBA,CARAVELI,COTAHUASI",-15.75,-72.75,160,7.8,10,63,2,,,200,3,,3,,3,,,63,2,,,200,3,,3,,3,,
+,1961,2,4,8,51,0,,,INDIA,24.9,93.34,141,7.6,,,,,,,,,,,,,,,,,,,,,,,,,
+,1962,1,7,10,3,0,,,BALKANS NW:  CROATIA,43.3,17.1,33,5.9,8,4,1,,,,,,2,,,,,4,1,,,,,,2,,,,
+,1963,1,31,2,27,0,,,"IRAN:  KHENDODZHAN, DAKHNE-UDZHAK",36.9,57.8,3,4.5,9,4,1,,,,,,2,,,,,,,,,,,,,,,,
+,1964,1,8,22,30,49.7,,,INDONESIA:  SULAWESI:  PINRANG,-3.7,119.4,90,5.2,,8,1,,,27,1,,2,,,,,8,1,,,27,1,,2,,,,
+,1965,1,1,21,38,29.2,,,ALGERIA:  M'SILA,35.7,4.4,10,5.5,,4,1,,,350,3,2,2,25000,4,,,4,1,,,350,3,2,2,2500,4,,
