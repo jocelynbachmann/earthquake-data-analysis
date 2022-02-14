@@ -25,7 +25,6 @@ E4 = Earthquake(2016, 4.9, 0)
 E5 = Earthquake(2017, 8.2, 98)
 
 @typecheck
-# template based on compound and reference rule
 def fn_for_earthquake(e: Earthquake) -> ...:
     return ...(e.year,
                e.magnitude,
@@ -42,7 +41,6 @@ LOE3 = [E1, E3, E5]
 LOE4 = [E4]
 
 @typecheck
-# template based on arbitrary-sized and reference rule
 def fn_for_loe(loe: List[Earthquake]) -> ...:
     # description of the acc
     acc = ... # type: ...
@@ -68,8 +66,6 @@ def magnitudes_and_deaths(fn: str) -> None:
     the average magnitudes of earthquakes for each of the following time periods:
     1961-1970, 1971-1980, 1981-1990, 1991-2000, 2001-2010, 2011-2020
     """
-    # return [] # stub
-    # template from HtDAP, based on function composition 
     return plot_magnitude_and_deaths(read(fn))  
 
 
@@ -81,9 +77,6 @@ def read(fn: str) -> List[Earthquake]:
     """    
     reads information from file name fn and returns a list of Earthquake data
     """
-    # return []  # stub
-    # Template from HtDAP
-    # loe contains the result so far
     loe = [] # type: List[Earthquake]
 
     with open(fn) as csvfile:
@@ -107,8 +100,6 @@ def check_for_none(d: Optional[int]) -> int:
     """
     returns 0 if d is None, and returns d otherwise
     """
-    # return 0 # stub
-    # template from Deaths
     if d is None:
         return 0
     else:
@@ -123,8 +114,6 @@ def plot_magnitude_and_deaths(loe: List[Earthquake]) -> None:
     displays a bar chart with average magnitude and average deaths for the time periods:
     1961-1970, 1971-1980, 1981-1990, 1991-2000, 2001-2010, 2011-2020 shown side by side
     """
-    # return None # stub
-    # template from visualization
     
     # width of each bar
     bar_width = 4
@@ -187,13 +176,8 @@ def num_sequence(values: List[float], initial: float, gap: float) -> List[float]
     the gap between values). For example, [4, 6, 8, 10] for 4 values, initial == 4 and
     gap == 2
     """
-    # return []  # stub
-    # Template from List[float] with additional parameters initial and gap
-    
-    # nums stores the numbers for the values seen so far
     nums = []  # type: List[float]
     
-    # next_num is the next number to use
     next_num = initial
     
     for val in values:
@@ -213,8 +197,6 @@ def final_average_magnitudes(loe: List[Earthquake]) -> List[float]:
     returns a list of the average magnitudes corresponding to the periods: 1961-1970,
     1971-1980, 1981-1990, 1991-2000, 2001-2010, 2011-2020 (in that order)
     """
-    # return [] # stub
-    # template from List[Earthquake]
     magnitude_1970 = magnitude_for_years(loe, 1961, 1970)
     magnitude_1980 = magnitude_for_years(loe, 1971, 1980)
     magnitude_1990 = magnitude_for_years(loe, 1981, 1990)
@@ -235,8 +217,6 @@ def magnitude_for_years(loe: List[Earthquake], min_year: int, max_year: int) -> 
     returns the average magnitude of all earthquakes that occured between min_year and
     max_year
     """
-    # return 0.0 # stub
-    # template from List[Earthquake] with additional parameters min_year and max_year
     correct_years = filter_for_years(loe, min_year, max_year)
     magnitudes = filter_for_magnitude(correct_years)
     average_magnitude = average(magnitudes)
@@ -248,9 +228,6 @@ def filter_for_magnitude(loe: List[Earthquake]) -> List[float]:
     """
     return a list of the magnitudes of the earthquakes in loe
     """
-    # return [] # stub
-    # template from List[Earthquake]
-    # magnitudes stores the magnitudes of the earthquakes in loe seen so far
     magnitudes = [] # type: List[float]
     for e in loe:
         magnitudes.append(get_modified_magnitude(e))
@@ -262,8 +239,6 @@ def get_modified_magnitude(e: Earthquake) -> float:
     """
     returns the magnitude of e mutiplied by 100 
     """
-    # return 0.0 # stub
-    # template from Earthquake
     return round((e.magnitude * 10), 1)
 
 ###############
@@ -276,8 +251,6 @@ def final_average_deaths(loe: List[Earthquake]) -> List[float]:
     returns a list of the average deaths caused by earthquakes in the periods: 
     1961-1970, 1971-1980, 1981-1990, 1991-2000, 2001-2010, 2011-2020 (in that order)
     """
-    # return [] # stub
-    # template from List[Earthquake]
     deaths_1970 = deaths_for_years(loe, 1961, 1970)
     deaths_1980 = deaths_for_years(loe, 1971, 1980)
     deaths_1990 = deaths_for_years(loe, 1981, 1990)
@@ -298,8 +271,6 @@ def deaths_for_years(loe: List[Earthquake], min_year: int, max_year: int) -> flo
     returns the average deaths of caused by all earthquakes that occured between 
     min_year and max_year
     """
-    # return 0 # stub
-    # template from List[Earthquake] with additional parameters min_year and max_year
     correct_years = filter_for_years(loe, min_year, max_year)
     deaths = filter_for_deaths(correct_years)
     average_deaths = average(deaths)
@@ -311,9 +282,6 @@ def filter_for_deaths(loe: List[Earthquake]) -> List[float]:
     """
     return a list of the number of deaths caused by the earthquakes in loe
     """
-    # return [] # stub
-    # template from List[Earthquake]
-    # deaths stores the deaths caused by the earthquakes in loe seen so far
     deaths = [] # type: List[int]
     for e in loe:
         deaths.append(get_modified_deaths(e))
@@ -325,8 +293,6 @@ def get_modified_deaths(e: Earthquake) -> float:
     """
     returns the number of deaths caused by e in thousands (i.e. divided by 1000)
     """
-    # return 0 # stub
-    # template from Earthquake
     return round((e.deaths/10), 4)
 
 
@@ -339,9 +305,6 @@ def filter_for_years(loe: List[Earthquake], min_year: int, max_year: int) -> Lis
     """
     returns a list of only the earthquakes in loe that occured between min_year and max_year
     """
-    # return [] # stub
-    # template from List[Earthquake] with additional parameters min_year and max_year
-    # years stores the earthquakes between the given years seen so far
     years = []  # type: List[Earthquake]
     for e in loe:
         if min_year <= get_year(e) <= max_year:
@@ -354,8 +317,6 @@ def get_year(e: Earthquake) -> int:
     """
     returns the year that e occured in
     """
-    # return 0 # stub
-    # template based on Earthquake
     return e.year
 
 @typecheck
@@ -363,9 +324,6 @@ def average(lof: List[float]) -> float:
     """
     returns the average of the values in lof. If lof is empty, returns 0.0. 
     """
-    # return 0.0 # stub
-    # template based on arbitrary sized 
-    # sum stores the sum of all values seen so far
     sum = 0.0 # type: float
     for f in lof:
         sum = sum + f
